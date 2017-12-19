@@ -7,20 +7,17 @@ import com.paganini.nio.NioServerBoss;
 import com.paganini.nio.NioServerWorker;
 
 /**
- * <p>注释</p>
+ * <p>selector线程管理者</p>
  * @author paganini
  * @version $Id: NioSelectorRunnablePool.java, v 0.1 2017年12月19日 下午2:28:21 qiuzhongtian Exp $
  */
 public class NioSelectorRunnablePool {
-    /**
-     * boss线程数组
-     */
+    
+    /** boss线程数组 */
     private final AtomicInteger bossIndex   = new AtomicInteger();
     private Boss[]              bosses;
 
-    /**
-     * worker线程数组
-     */
+    /** worker线程数组 */
     private final AtomicInteger workerIndex = new AtomicInteger();
     private Worker[]            workeres;
 
